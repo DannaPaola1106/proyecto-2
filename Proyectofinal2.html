@@ -6,7 +6,8 @@
     <title>Hotel Paradise</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body  style="background-size: cover; background-position: center; background-repeat: no-repeat;  background-image: url('https://img.freepik.com/vector-gratis/fondo-acuarela_87374-74.jpg?t=st=1739045283~exp=1739048883~hmac=ec0ffa0dff6b0dbbdeaf6428e7336ddc67fdaa3061ae64de2cd732156591d176&w=900')" >
+   
     <header>
         <div class="logo">
             <h1>Hotel Paradise</h1>
@@ -16,6 +17,7 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#habitacione">Habitaciones</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#Reserva tu habitacion">Reserva tu habitacion</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -33,32 +35,72 @@
         <h2>Nuestras Habitaciones</h2>
         <div class="room-gallery">
             <div class="room-item">
-                <img src="images/habitacion1.jpg" alt="Habitación Estándar">
                 <h3>Habitación Estándar</h3>
                 <p>Comodidad y estilo a un precio accesible.</p>
+                <ul>
+                    <li>Cama king size</li>
+                    <li>Baño privado con jacuzzi</li>
+                    <li>TV de pantalla plana</li>
+                    <li>Mini bar</li>
+                    <li>Wi-Fi gratuito</li>
+                </ul>
+                <p class="price">$150 por noche</p>
+                <a href="#reservar" class="btn">Reservar Ahora</a>
+            </div>
+            <img src="C:\Users\danna\OneDrive\Desktop\wed\estandar.jpg" alt="Habitación Estándar">
             </div>
             <div class="room-item">
-                <img src="images/habitacion2.jpg" alt="Habitación Deluxe">
                 <h3>Habitación Deluxe</h3>
                 <p>Lujo y espacio para una experiencia inolvidable.</p>
+                <ul>
+                    <li>Cama king size</li>
+                    <li>Baño privado con jacuzzi</li>
+                    <li>TV de pantalla plana</li>
+                    <li>Mini bar</li>
+                    <li>Wi-Fi gratuito</li>
+                </ul>
+                <p class="price">$150 por noche</p>
+                <a href="#reservar" class="btn">Reservar Ahora</a>
+            </div>
+            <img src="C:\Users\danna\OneDrive\Desktop\wed\delux.jpg" alt="Habitación Deluxe">
             </div>
             <div class="room-item">
-                <img src="images/habitacion3.jpg" alt="Suite Presidencial">
+              
                 <h3>Suite Presidencial</h3>
                 <p>El máximo confort y exclusividad.</p>
+                <li>Amplio salón y dormitorio separado</li>
+                    <li>Baño privado con sauna</li>
+                    <li>TV de pantalla plana en salón y dormitorio</li>
+                    <li>Mini bar y cafetera</li>
+                    <li>Wi-Fi gratuito</li>
+                </ul>
+                <p class="price">$250 por noche</p>
+                <a href="#reservar" class="btn">Reservar Ahora</a>
+                </div>
+                <img src="C:\Users\danna\OneDrive\Desktop\wed\presidencial.jpg" alt="Suite Presidencial">
+            </div>
+
+
+
             </div>
         </div>
     </section>
 
     <section id="servicios" class="services">
-        <h2>Nuestros Servicios</h2>
-        <ul>
-            <li>Piscina Infinity</li>
-            <li>Spa y Wellness</li>
-            <li>Restaurante Gourmet</li>
-            <li>Wi-Fi Gratuito</li>
-        </ul>
-    </section>
+    <h2>Nuestros Servicios</h2>
+    <ul>
+        <li>Piscina Infinity</li>
+        <br>
+        <img width="350" height="250" src="C:\Users\danna\OneDrive\Desktop\wed\piscina.jpg" alt="piscina"> 
+        <li>Spa y Wellness</li>
+        <br>
+        <img width="350" height="250" src="C:\Users\danna\OneDrive\Desktop\wed\Restaurante.jpg" alt="spa"> 
+        <li>Restaurante Gourmet</li>
+        <br>
+        <img width="350" height="250" src= "C:\Users\danna\OneDrive\Desktop\wed\spa-ecologico-y-wellness-1.jpg" alt="Restaurante"> 
+        <li>Wi-Fi Gratuito</li>
+        <br>
+        <img width="350" height="250" src="C:\Users\danna\OneDrive\Desktop\wed\wifi.jpg" alt="Wi-Fi">
 
     <section id="contacto" class="contact">
         <h2>Contacto</h2>
@@ -76,8 +118,59 @@
         </form>
     </section>
 
+</header>
+
+<section id="Reserva tu habitacion" class="reserve your room">
+    <h2>Reserva tu Habitación</h2>
+    <form action="#" method="post">
+            <label for="habitacion">Tipo de Habitación:</label>
+            <select id="habitacion" name="habitacion" required>
+                <option value="">Seleccione una opción</option>
+                <option value="estandar">Habitación Estándar ($100 por noche)</option>
+                <option value="deluxe">Habitación Deluxe ($150 por noche)</option>
+                <option value="presidencial">Suite Presidencial ($250 por noche)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha-ingreso">Fecha de Ingreso:</label>
+            <input type="date" id="fecha-ingreso" name="fecha-ingreso" required>
+        </div>
+
+        <div class="form-group">
+            <label for="fecha-salida">Fecha de Salida:</label>
+            <input type="date" id="fecha-salida" name="fecha-salida" required>
+        </div>
+
+    
+        <div class="form-group">
+            <label>Forma de Pago:</label>
+            <div class="opciones-pago">
+                <label>
+                    <input type="radio" name="pago" value="tarjeta" required> Tarjeta de Crédito/Débito
+                </label>
+                <label>
+                    <input type="radio" name="pago" value="efectivo"> Efectivo
+                </label>
+                <label>
+                    <input type="radio" name="pago" value="transferencia"> Transferencia Bancaria
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Reservar Ahora</button>
+        </div>
+    </form>
+</section>
+
     <footer>
-        <p>&copy; 2023 Hotel Paradise. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Hotel Paradise. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
