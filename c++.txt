@@ -1,0 +1,377 @@
+#include <iostream>
+using namespace std;
+#include <stdlib.h>
+#include <math.h>
+
+
+int main()
+{
+//-----------FACTORIAL--------------     
+    
+    //-----for----
+    cout<< endl;
+    int num= 0;
+    int x=0;
+    int factorial=1;
+
+cout<< "\n Con for \n";
+
+
+    cout << "Introduce un numero del 1 al 7:  "<< endl;
+    cin>> num;
+    
+   for (x= 1; x <= num; ++x){
+        factorial *= x;
+    }
+    
+    cout<< "El factorial de " << num << " es " << factorial <<endl;
+   
+
+//-------While-------
+
+cout<< endl;
+    int nume= 0;
+    int factory=1;
+    
+    
+    cout << "\ncon while \n";
+    
+     cout << "Introduce un numero del 1 al 7:  "<< endl;
+    cin>> nume;
+int f = 1;
+while (f <= nume){
+    factory *=f;
+    ++f;
+}
+
+cout<< "El factorial de " << nume << " es "<< factory << endl;
+
+//----doWhile------
+
+cout<< endl;
+    int numer= 0;
+    int factorial1=1;
+    int g = 1;
+
+        cout << "\ncon doWhile \n";
+
+     cout << "Introduce un numero del 1 al 7:  "<< endl;
+    cin>> numer;
+    
+do{
+    factorial1 *=g;
+    ++g;
+}while(g<=numer);
+cout<<"El factorial de "<< numer << " es " << factorial1 << "\n"<< endl;
+
+
+//--------PROMEDIOS------------
+
+//-----------FOR--------------
+
+int numCalf= 0;
+int a =0;
+cout<< "\n Con for \n";
+cout<< "Introduce la cantidad de calificaciones: ";
+cin>> numCalf;
+//---suma--- 
+double suma =0.0;
+for(a=0; a < numCalf; ++a){
+    double calificacion;
+    cout<< "Introduce la calificacion "<< (a+1)<< " : ";
+    cin >> calificacion;
+    suma += calificacion;
+}
+//---promedio--- 
+double promedio = suma / numCalf;
+cout<< "El promedio es: " << promedio << endl;
+if (promedio>=6){
+    cout<< "EL alumno aprobo "<< endl;
+    }else{
+        cout<< "El alumno reprobo "<< endl;
+
+}
+
+
+//---while--- 
+int numcalf= 0;
+int e=0;
+cout<< "\n Con while \n";
+
+cout << "Introduce la cantidad de calificaciones: ";
+cin>> numcalf;
+//---suma---
+double sume=0.0;
+while (e < numcalf){
+    double Calificacion;
+    cout << "Introduce la Calificacion "<< (e+1)<< " : ";
+    cin >> Calificacion;
+    sume += Calificacion;
+    ++e;
+}
+//---promedio---
+double Promedio = sume / numcalf;
+cout<< "El Promedio es: "<< Promedio<< endl;
+
+if (Promedio >=6){
+    cout<< "El alumno aprobo " << endl;
+    }else{
+        cout<< "EL alumno reprobo "<< endl;
+}
+
+//---doWhile---
+
+    int numcalfi= 0;
+    int w= 0;
+    cout<< "\n Con doWhile \n";
+
+    cout<< "Introduce la cantidad de calificaciones: ";
+    cin>> numcalfi;
+
+double sumi=0.0;
+do{
+    double Calificacion1;
+    cout<<"Introduce la calificacion "<< (w+1)<< " : ";
+    cin>> Calificacion1;
+    suma += Calificacion1;
+    ++w;
+} while(w< numcalfi);
+
+double promedio1 = suma / numcalfi;
+cout << "El promedio es: "<< promedio1 << endl;
+ if (promedio1 >= 6){
+     cout << "El alumno aprobo "<< endl;
+ }else {
+     cout << "El alumno reprobo "<< endl;
+ }
+
+//--------INTERESES-------
+//---FOR---
+
+int tiempo= 0;
+int v=1;
+
+cout<< "\n Con for \n";
+
+double tasa, tasaint, montoTotal, mensualidad, cantidadaPagar, montocapital, tasaInt;
+
+cout <<"\nIntroduce el capital: ";
+cin>> montocapital;
+cout<< "\nIntroduce a estos meses quieres pagar: ";
+cin>> tiempo;
+cout<<"\nIntroduce la tasa de interes anual: ";
+cin>>tasaInt;
+
+cout<< "Mensualidad\tMonto a pagar\tInteres Compuesto \n";
+cout<<"-------------------------------------------------- \n";
+
+    double totalpagado = 0;
+    double faltaPagar =montocapital;
+    double xd = 0;
+tasa = tasaInt / 100;
+tasaint = tasa * faltaPagar;
+montoTotal = faltaPagar + tasaint;
+mensualidad = montoTotal / tiempo;
+cantidadaPagar = mensualidad - montoTotal;
+double xc= cantidadaPagar + mensualidad;
+
+for (v = 1; v <= tiempo; ++v){
+    
+    xd -= xc;
+    totalpagado += mensualidad;
+    
+   
+ cout<<" "<< v <<"  " <<mensualidad << "\t" <<totalpagado<< "\t\t"  <<xd <<"\n\n" <<endl;
+}
+
+
+//-------While-------
+int plazo= 0;
+int z=1;
+
+cout<< " \nCon while \n";
+
+double tasaI, Interes, montoFinal, mensualidades, cantidadPagar, capitalIn, tasaInteres;
+
+cout <<"\nIntroduce el capital: ";
+cin>> capitalIn;
+cout<< "\nIntroduce a estos meses quieres pagar: ";
+cin>> plazo;
+cout<<"\nIntroduce la tasa de interes anual: ";
+cin>>tasaInteres;
+
+cout<< "Mensualidad\tMonto a pagar\tInteres Compuesto \n";
+cout<<"-------------------------------------------------- \n";
+
+    double Totalpagado = 0;
+    double FaltaPagar =capitalIn;
+    double xf = 0;
+tasaI = tasaInteres / 100;
+Interes = tasaI * FaltaPagar;
+montoFinal = FaltaPagar + Interes;
+mensualidades = montoFinal / plazo;
+cantidadPagar = mensualidades - FaltaPagar;
+double xa= Totalpagado - mensualidades;
+
+while (z <= plazo){
+    Totalpagado += mensualidades;
+    xf -= xa;
+    z++;
+    
+ cout<<" "<< z <<"  " <<mensualidades << "\t" <<Totalpagado<< "\t\t"  <<xf <<"\n" <<endl;
+    
+}
+
+
+//-------doWhile-------
+int plazo1= 0;
+int pk=1;
+
+cout<< "\n Con doWhile \n";
+
+double tasaI1, Interes1, montoFinal1, mensualidades1, cantidadPagar1, capitalIn1, tasaInteres1;
+
+cout <<"\nIntroduce el capital: ";
+cin>> capitalIn1;
+cout<< "\nIntroduce a estos meses quieres pagar: ";
+cin>> plazo1;
+cout<<"\nIntroduce la tasa de interes anual: ";
+cin>>tasaInteres1;
+
+cout<< "\nMensualidad\tMonto a pagar\tInteres Compuesto \n";
+cout<<"-------------------------------------------------- \n";
+
+    double Totalpagado1 = 0;
+    double FaltaPagar1 =capitalIn1;
+    double xf1 = 0;
+tasaI1 = tasaInteres1 / 100;
+Interes1 = tasaI1 * FaltaPagar1;
+montoFinal1 = FaltaPagar1 + Interes1;
+mensualidades1 = montoFinal1 / plazo1;
+cantidadPagar1 = mensualidades1 - FaltaPagar1;
+double xa1= Totalpagado1 - mensualidades1;
+    do{
+        
+        Totalpagado1 += mensualidades1;
+        xf1 -= xa1;
+        pk++;
+        
+        cout<<" "<< pk <<"  " <<mensualidades1 << "\t" <<Totalpagado1<< "\t\t"  <<xf1 <<"\n" <<endl;
+        
+        }while (pk <= plazo1);
+    
+ 
+    
+
+
+    return 0;
+}
+
+
+
+
+
+    cout << "\nTotal a pagar: " << montoTotal << endl;
+    cout << "\nmensualidad" << mensualidad  <<endl;
+    montoTotal = montoTotal - mensualidad;
+    cout << "La deuda es: " << montoTotal;
+
+
+montoTotal = faltaPagar + tasaint;
+    montoTotal = montoTotal - mensualidad;
+
+    cout << v << "\t\t"<< montoTotal << "\t"<< mensualidad << "\t" <<montoTotal<< endl;
+}
+    
+--------------------------------------------------------
+
+    cout << "Ingresa el primer número: ";
+        cin >> num3;
+        cout << "Ingresa el segundo número: ";
+        cin >> num4;
+----------------------------------------------------------------------------
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    const int numPreguntas = 5;
+    string preguntas[numPreguntas] = {
+        "¿Cuál es tu película de terror favorita?",
+        "¿Cuál es el villano de terror que más te asusta?",
+        "¿Prefieres el terror psicológico o el terror sobrenatural?",
+        "¿Te gusta ver películas de terror en el cine o en casa?",
+        "¿Cuál es la escena de terror más impactante que has visto?"
+    };
+    string respuestas[numPreguntas];
+
+    cout << "Por favor responde a las siguientes preguntas:" << endl;
+
+    // Recolecta las respuestas del usuario
+    for (int i = 0; i < numPreguntas; i++) {
+        cout << preguntas[i] << endl;
+        getline(cin, respuestas[i]);
+    }
+
+    // Muestra las respuestas del usuario
+    cout << "\nTus respuestas:" << endl;
+    for (int i = 0; i < numPreguntas; i++) {
+        cout << preguntas[i] << " " << respuestas[i] << endl;
+    }
+
+    return 0;
+}
+
+-------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+if(respuesta2==1){
+                        cout << "\n1. ¿Cuál fue la primera película de terror que viste y qué impacto tuvo en ti?\n";
+                        cin >> respuestas;
+                        cout << "\n¿Prefieres películas de terror psicológico, de monstruos o sobrenaturales?\n";
+                        getline (cin >> respuestas[i];)
+                    cout << respuestas;
+                        
+-------------------------------------------------------------------------------------
+
+peliculas
+	terror
+	triller
+	ficción 
+	animación 
+	romance 
+cual es tu pelicula favorita (Dependiendo de la categoría que eligió)
+Viste la pelicula No hables con extraños 
+	Te gustó?
+*Mostrar* Hablemos un poco sobre la pelicula 
+-Si en tus vacaciones conocieras a alguien y te invita de vacaciones a su casa la cual esta en medio de la nada irias? 
+-Llevarias a tu hija de la cual no tiene ni 15 años?
+-si miras a un niño sin lengua el cual le tiene miedo a su papa, le hablarías a la policía?
+-teniendo una hija, la llevarías a la casa de unos extraños?
+
+
+
+
+
+*Terror*
+
+
+1. ¿Cuál fue la primera película de terror que viste y qué impacto tuvo en ti?
+2. ¿Prefieres películas de terror psicológico, de monstruos o sobrenaturales?
+3. ¿Qué película de terror crees que tiene la historia más aterradora?
+4. ¿Qué villano de terror te ha dado más miedo y por qué?
+5. ¿Tienes algún director de cine de terror favorito?
+6. ¿Te gustan las películas de terror basadas en hechos reales? ¿Cuál es tu favorita de este tipo?
+7. ¿Hay alguna película de terror que no pudiste terminar de ver?
+8. ¿Cuál es la escena de terror que más se te ha quedado grabada en la mente?
+9. Si pudieras vivir en una película de terror, ¿cuál elegirías y cómo sobrevivirías?
+10. ¿Te gustan las sagas de terror o prefieres películas independientes?
+11. ¿Qué piensas de los efectos especiales en las películas de terror: prefieres efectos prácticos o digitales?
+12. ¿Hay algún cliché de las películas de terror que te moleste o te parezca innecesario?
+13. ¿Cómo sería, según tú, la película de terror perfecta?
+14. ¿Crees en lo sobrenatural, o el terror es solo entretenimiento para ti?
+15. ¿Cuál es el mejor lugar o situación para ver una película de terror? ¿Solo, con amigos, en casa, en el cine...?
+
+
+
+	
+        
